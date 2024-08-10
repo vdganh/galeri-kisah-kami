@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Galeri KisahKami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ffcccc 30%, #ffe6e6 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .alert {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: slideIn 1s forwards;
+            backdrop-filter: blur(10px);
+        }
+
+        .alert h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #d63384;
+            font-weight: 700;
+        }
+
+        .alert p {
+            color: #555;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(214, 51, 132, 0.5);
+            background-color: #c51f6d;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(214, 51, 132, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(214, 51, 132, 1);
+            }
+        }
+
+        .glow {
+            animation: glow 1.5s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+
+<div class="alert glow">
+    <h1>Selamat Datang di Galeri KisahKami</h1>
+    <p>Tekan Ya untuk lanjut</p>
+    <button class="button" onclick="redirectToPublic()">Ya</button>
+</div>
+
+<script>
+    function redirectToPublic() {
+        window.location.href = 'public/index.html'; // Ganti dengan path yang sesuai jika berbeda
+    }
+</script>
+
+</body>
+</html>
